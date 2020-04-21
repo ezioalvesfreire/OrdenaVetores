@@ -3,7 +3,28 @@
 #include <conio.h>
 #include <time.h>
 
+int buscaBinaria(int arranjo[],int tamanho, int valorProcurado)
+{
+    // Na busca binária, espera-se que o vetor esteja ordenado
 
+    int i = 0;
+    int f = tamanho -1;
+    int meio;
+    while (i<=f)
+    {
+        meio = (i+f)/2;
+        if (arranjo[meio]==valorProcurado)
+            return meio;
+        else
+        {
+            if (valorProcurado>arranjo[meio])
+                i=meio+1;
+            else
+                f=meio-1;
+        }
+    }
+    return -1;
+}
 
 void selecao(int vet[], int n)
 {
@@ -47,7 +68,7 @@ geraNumAleatorio(int vetor[], int n)
     for(int i = 0; i < n; i++)
     {
         vetor[i] = { rand() % 50};
-      //  printf("%d ", vetor[i]);
+        //  printf("%d ", vetor[i]);
 
     }
 }
@@ -63,10 +84,10 @@ imprimeVetor(int vetor[],int n)
 
 int main()
 {
-    int vetor[10000];
-    int n =10000;
+    int vetor[10];
+    int n =10;
 
-    printf("================= ORDENACAO DE DADOS METODO SELECTION SORT ===================\n\n");
+    printf("\n================= ORDENACAO DE DADOS METODO SELECTION SORT ===================\n\n");
 
     printf("\n\t\t NUMEROS ALEATORIOS DESORDENADOS");
     printf("\n\n\t\t  ");
@@ -80,11 +101,26 @@ int main()
     selecao(vetor, n);
 
     printf("\n\n");
-   //==================== IMPRIME O VETOR ORDENADO ====================
+    //==================== IMPRIME O VETOR ORDENADO ====================
     printf("\n\t\t NUMEROS ALEATORIOS ORDENADOS");
     printf("\n\n\t\t  ");
 
     imprimeVetor(vetor, n);
+
+    printf("\n\n");
+
+    int p,resposta;
+    printf("Qual valor a ser procurado?\n");
+
+    scanf("%d", &p);
+
+    resposta=buscaBinaria(vetor,n,p);
+    if (resposta==-1)
+        printf("O valor procurado nao foi encontrado.");
+
+    else
+        printf("O valor procurado encontra-se na posicao %d ", resposta);
+    printf("\n\n");
 
     printf("\n\n\n\n\n\n\n");
 
