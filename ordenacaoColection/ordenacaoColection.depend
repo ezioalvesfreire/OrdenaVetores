@@ -1,0 +1,15 @@
+# depslib dependency file v1.0
+1587408882 source:c:\users\ezio\desktop\estruturadedados\ordenacaocolection\main.cpp
+	<stdio.h>
+	<stdlib.h>
+	<time.h>
+	<conio.h>
+	<bits/stdc++.h>
+
+1587437065 source:c:\users\ezio\documents\ordenavetores\ordenacaocolection\main.cpp
+	<stdio.h>
+	<stdlib.h>
+	<time.h>
+	<conio.h>
+	<bits/stdc++.h>
+

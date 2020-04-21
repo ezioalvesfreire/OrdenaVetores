@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes" ?>
+<CodeBlocks_workspace_file>
+	<Workspace title="Workspace">
+		<Project filename="ordenacaoBubbleSort/ordenacaoBubbleSort.cbp" />
+		<Project filename="ordenacaoColection/ordenacaoColection.cbp" />
+		<Project filename="ordenacaoInsertionSort/ordenacaoInsertionSort.cbp" />
+		<Project filename="ordenacaoQuickSort/ordenacaoQuickSort.cbp" />
+		<Project filename="ordenacaoSelectionSort/ordenacaoSelectionSort.cbp" />
+		<Project filename="ordenacaoTimSort/ordenacaoTimSort.cbp" />
+	</Workspace>
+</CodeBlocks_workspace_file>

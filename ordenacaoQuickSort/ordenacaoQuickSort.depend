@@ -1,0 +1,13 @@
+# depslib dependency file v1.0
+1587409081 source:c:\users\ezio\desktop\estruturadedados\ordenacaoquicksort\main.cpp
+	<stdio.h>
+	<stdlib.h>
+	<conio.h>
+	<time.h>
+
+1587409081 source:c:\users\ezio\desktop\ordenação de vetores\ordenacaoquicksort\main.cpp
+	<stdio.h>
+	<stdlib.h>
+	<conio.h>
+	<time.h>
+

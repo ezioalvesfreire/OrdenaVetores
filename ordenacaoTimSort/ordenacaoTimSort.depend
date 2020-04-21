@@ -1,0 +1,9 @@
+# depslib dependency file v1.0
+1587410166 source:c:\users\ezio\desktop\estruturadedados\ordenacaotimsort\main.cpp
+	<stdio.h>
+	<stdlib.h>
+	<time.h>
+	<iostream>
+	<conio.h>
+	<bits/stdc++.h>
+

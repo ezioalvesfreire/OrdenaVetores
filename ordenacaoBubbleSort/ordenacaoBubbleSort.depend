@@ -1,0 +1,11 @@
+# depslib dependency file v1.0
+1587408589 source:c:\users\ezio\desktop\estruturadedados\ordenacaobubblesort\main.cpp
+	<stdio.h>
+	<stdlib.h>
+	<time.h>
+
+1587409867 source:c:\users\ezio\desktop\ordenação de vetores\ordenacaobubblesort\main.cpp
+	<stdio.h>
+	<stdlib.h>
+	<time.h>
+
