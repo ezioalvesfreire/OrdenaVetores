@@ -2,6 +2,26 @@
 #include <stdlib.h>
 #include <time.h>
 
+int buscaBinaria(int arranjo[],int tamanho, int valorProcurado) {
+	// Na busca binária, espera-se que o vetor esteja ordenado
+
+	int i = 0;
+	int f = tamanho -1;
+	int meio;
+	while (i<=f) {
+		meio = (i+f)/2;
+		if (arranjo[meio]==valorProcurado)
+			return meio;
+		else {
+			if (valorProcurado>arranjo[meio])
+				i=meio+1;
+			else
+				f=meio-1;
+		}
+	}
+	return -1;
+}
+
 // void bubble é o método para ordenação do vetor
 void bubble(int vetor[],int n)
 {
@@ -45,8 +65,8 @@ void contaTempo(){
 
 int main()
 {
-    int vetor[10000];
-    int n=10000;
+    int vetor[10];
+    int n=10;
     printf("\n================= ORDENACAO DE DADOS METODO BUBBLE SORT ===================\n\n");
 
 
@@ -71,6 +91,19 @@ int main()
     imprimeVetor(vetor, n);
 
     printf("\n\n");
+
+     int p,resposta;
+    printf("Qual valor a ser procurado?\n");
+
+	scanf("%d", &p);
+
+	resposta=buscaBinaria(vetor,n,p);
+	if (resposta==-1)
+        printf("O valor procurado nao foi encontrado.");
+
+	else
+        printf("O valor procurado encontra-se na posicao %d ", resposta);
+        printf("\n\n");
 
 
     printf("\n\n");
