@@ -8,6 +8,26 @@
 ///Obs:mas tentar compilar o código em um compilador que não seja o GCC, poderá falhar
 //#define min;
 
+int buscaBinaria(int arranjo[],int tamanho, int valorProcurado) {
+	// Na busca binária, espera-se que o vetor esteja ordenado
+
+	int i = 0;
+	int f = tamanho -1;
+	int meio;
+	while (i<=f) {
+		meio = (i+f)/2;
+		if (arranjo[meio]==valorProcurado)
+			return meio;
+		else {
+			if (valorProcurado>arranjo[meio])
+				i=meio+1;
+			else
+				f=meio-1;
+		}
+	}
+	return -1;
+}
+
 
 //================ METODO DE ORDENACAO TIM-SORT ===================
 
@@ -142,8 +162,8 @@ void calculaTempo(){
 
 int main()
 {
-    int n=100;
-    int vetor[100];
+    int n=10;
+    int vetor[10];
 
  printf("\n================ METODO DE ORDENACAO TIM-SORT ===================\n\n\n");
 
@@ -162,6 +182,19 @@ int main()
 
 //================== IMPRIME VETOR ORDENADO ====================================
     imprimeVetor(vetor, n);
+
+     int p,resposta;
+    printf("Qual valor a ser procurado?\n");
+
+	scanf("%d", &p);
+
+	resposta=buscaBinaria(vetor,n,p);
+	if (resposta==-1)
+        printf("O valor procurado nao foi encontrado.");
+
+	else
+        printf("O valor procurado encontra-se na posicao %d ", resposta);
+        printf("\n\n");
 
    calculaTempo();
 
